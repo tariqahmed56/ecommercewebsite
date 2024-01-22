@@ -1,0 +1,125 @@
+.satisfy{
+    font-family: "Satisfy", cursive;
+  }
+  html {
+    font-size: 16px;
+  }
+  nav {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 4.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.4rem;
+    transition: 0.4s;
+  }
+  nav .right h3 {
+    font-size: 1.8rem;
+    font-family: "Satisfy", cursive;
+    color: #1e1d1d;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  li a img{
+    width: 50px;
+    height: 50px;
+  }
+  .underline {
+    width: 0px;
+    height: 3px;
+    background-color: rgb(29, 28, 27);
+    display: block;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    transition: width 0.5s ease;
+  }
+  
+  a:hover .underline {
+    width: 60px; 
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #171616;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .menuBar{
+    display: none;
+  }
+  @media (max-width:728px) {
+    .nav{
+        transition: width 0.4s ease;
+      }
+      .ul {
+        display: none;
+      }
+      .menuBar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .cross:nth-child(3) {
+        opacity: 0;
+      }
+      .cross:nth-child(1) {
+        transform: rotate(30deg);
+      }
+      .cross:nth-child(2) {
+        transform: rotate(-42deg);
+        /* transform: translateY(10px); */
+        margin-top: -6px;
+      }
+      .nav-direct {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        max-width: 100vw;
+        height: 100dvh;
+        padding: 10px 0;
+      }
+      .resize {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .active {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-self: center;
+        gap: 20px;
+        /* background-color: green; */
+      }
+      .active li:not(:first-child) {
+        background: burlywood;
+        font-weight: 600;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+      }
+      .active li a {
+        color: black;
+      }
+  }
