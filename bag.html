@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="./styles/nav.css">
 </head>
 <body>
+  <header>
     <nav class="navbar">
         <div class="right">
           <h3>TasteTheBest</h3>
@@ -53,20 +54,46 @@
           </div>
         </div>
       </nav>
-    <h1>
+  </header>
+  <section class="Cart">
+    <div class="products">
+      <h1>
         Cart Items
     </h1>
-    <div class="bagSummary">
-
-    </div>
     <div class="bag-items-container">
 
     </div>
-    <footer>
-        <p>&copy; 2024 TasteTheBest. All rights reserved.</p>
-        <p>Address: Tharparkar</p>
-        <p>Phone: +92 345 2283944</p>
-    </footer>
+    </div>
+    <div class="bagSummary">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+    <!-- will be generated dynamically with JavaScript -->
+
+          <!-- <tr>
+            <td colspan="2" class="totalLabel">Total Price</td>
+            <td class="totalPrice">$10.99</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <button class="orderButton">Order Now</button>
+    </div> -->
+    </tbody>
+  </table>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2024 TasteTheBest. All rights reserved.</p>
+    <p>Address: Tharparkar</p>
+    <p>Phone: +92 345 2283944</p>
+</footer>
     <script src="./scripts/bag.js"></script>
 </body>
 </html>
