@@ -229,6 +229,6 @@ checkBoxes.forEach(checkBox => {
     }
       localStorage.setItem('CartItems', JSON.stringify(cartItems));
       // updating Bag summary Where Price is Shown
-      calculateCart();
+      
     
 }
