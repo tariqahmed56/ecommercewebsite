@@ -100,6 +100,41 @@ function instance(){
             "name" : "chicken Curry",
             "price": 10.00,
              "image" : 'images/dish4.jpeg'
+        },
+        {
+          "id": 10,
+          "name": "Vegetarian Pizza",
+          "type": "Pizza",
+          "price": 12.99,
+          "image": "https://th.bing.com/th/id/OIP.RyF12CjDGrG3YngqLLEc2gHaHa?w=184&h=185&c=7&r=0&o=5&pid=1.7"
+        },
+        {
+          "id": 11,
+          "name": "Classic Caesar Salad",
+          "type": "Salad",
+          "price": 8.49,
+          "image": "https://th.bing.com/th/id/OIP.8UagT3WWGxruvIOqJTCPeQHaE8?w=184&h=123&c=7&r=0&o=5&pid=1.7"
+        },
+        {
+          "id": 12,
+          "name": "Shrimp Scampi Pasta",
+          "type": "Pasta",
+          "price": 14.99,
+          "image": "https://th.bing.com/th/id/OIP.9ypSQDAHBgkR0otNYTnD5AHaLH?w=184&h=276&c=7&r=0&o=5&pid=1.7"
+        },
+        {
+          "id": 13,
+          "name": "Veggie Wrap",
+          "type": "Wrap",
+          "price": 9.99,
+          "image": "https://th.bing.com/th/id/OIP.WSuERtK52yBQW_OEGcXWowHaJK?w=149&h=185&c=7&r=0&o=5&pid=1.7"
+        },
+        {
+          "id": 14,
+          "name": "BBQ Pulled Pork Sandwich",
+          "type": "Sandwich",
+          "price": 11.49,
+          "image": "https://th.bing.com/th/id/OIP.DDSvbPgWW2zwsL_xEGIvPQHaHa?w=192&h=192&c=7&r=0&o=5&pid=1.7"
         }
        
       ]; 
@@ -151,7 +186,7 @@ checkBoxes.forEach(checkBox => {
             if (filteredItem.includes(dataSet)) {
                 let toRemove = filteredItem.findIndex(items => items === dataSet);
                 filteredItem.splice(toRemove, 1);
-                console.log(filteredItem)
+                // console.log(filteredItem)
             } else {
                 filteredItem.push(dataSet);
             }
@@ -179,19 +214,21 @@ checkBoxes.forEach(checkBox => {
     // add to Cart
    function addToCart(id) {
      cartItems = JSON.parse(localStorage.getItem('CartItems')) || [];
+    //  checking If the item is already in the cart
      let existingItem = cartItems.find(existItem => existItem.id === id);
-
+        // updating Cart accordingly if the item is already in the cart or Not
      if(existingItem){
       existingItem.count += 1; 
        
     }else{
      let newItem = data.find(item=> item.id === id);
-     console.log(newItem)
      if(newItem){
       newItem.count = 1;
       cartItems.push(newItem);
      }
     }
       localStorage.setItem('CartItems', JSON.stringify(cartItems));
+      // updating Bag summary Where Price is Shown
+      calculateCart();
     
 }
