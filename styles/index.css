@@ -58,7 +58,7 @@ padding: 20px;
   gap: 10px;
   margin-bottom: 10px;
   min-width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .filters label {
     width: 85px;
